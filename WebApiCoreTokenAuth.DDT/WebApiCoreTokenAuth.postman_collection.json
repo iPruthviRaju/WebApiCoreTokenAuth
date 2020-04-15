@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "12470629-b26d-4ee1-ac7a-1cb1664680d5",
+		"name": "WebApiCoreTokenAuth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:60158/api/auth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60158",
+					"path": [
+						"api",
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth using token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODc0MDYyMTAsImlzcyI6IiRAIzIwMjAiLCJhdWQiOiJ2aWV3ZXJzIn0.wG1leFZThpL9dDP3Yqwa0eyrhXTtHwfvgS7HNrWryXY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:60158/api/values",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60158",
+					"path": [
+						"api",
+						"values"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
